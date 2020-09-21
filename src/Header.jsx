@@ -5,13 +5,17 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles (() => ({
     typographyStyles: {
-        flex: 1
+        flex: "1",
+    },
+    appBarStyles: {
+        height: "10vh",
+        width: "100%"
     }
 }));
 const Header = () => {
     const classes = useStyles();
     return(
-        <AppBar position = 'static'>
+        <AppBar position = 'static' className = {classes.appBarStyles}>
             <Toolbar>
                 <Typography className = {classes.typographyStyles}>Joseph Horton</Typography>
                 <MenuIcon/>
